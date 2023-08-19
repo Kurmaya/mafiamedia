@@ -653,4 +653,34 @@ color:red!important;
   .mark h2{
     font-size: 2rem;
   }
+  .vid-holder{
+    height: 197px;
+  }
+.work-container{
+  overflow: hidden;
+}
+  .vid-list{
+    display: block;
+    width:100%;
+    height: 300px;
+  }
+  .list h4{
+    left:50%;
+  }
+  .soc-media-wrapper{
+    grid-template-columns: repeat(2,1fr);
+    place-items:justify;
+  }
+  .soc-item{
+    width:150px;
+    height: 100px;
+  }
+  .hold h2{
+    font-size:2rem!important;
+    width:100%;
+  }
+  .hold.active h2{
+    font-size: 1.5rem!important;
+  }
+
 }
