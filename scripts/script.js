@@ -15,14 +15,14 @@ import * as dat from "https://cdn.skypack.dev/dat.gui";
 // import * as dat from "https://cdn.skypack.dev/dat.gui";
 // import {GLTFLoader} from '../modules/GLTFLoader.js'
 
-import * as THREE from '/modules/three.module.js';
-import {GLTFLoader} from '/modules/GLTFLoader.js';
-import { EffectComposer } from '/modules/EffectComposer.js';
-import { RenderPass } from '/modules/RenderPass.js';
-import { FilmPass } from '/modules/FilmPass.js';
-import { ShaderPass } from '/modules/ShaderPass.js';
-import {VignetteShader} from '/modules/VignetteShader.js';
-import {FXAAShader} from '/modules/FXAAShader.js';
+import * as THREE from '../modules/three.module.js';
+import {GLTFLoader} from '../modules/GLTFLoader.js';
+import { EffectComposer } from '../modules/EffectComposer.js';
+import { RenderPass } from '../modules/RenderPass.js';
+import { FilmPass } from '../modules/FilmPass.js';
+import { ShaderPass } from '../modules/ShaderPass.js';
+import {VignetteShader} from '../modules/VignetteShader.js';
+import {FXAAShader} from '../modules/FXAAShader.js';
 
 
 // const gui = new dat.GUI();
