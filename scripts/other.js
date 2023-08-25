@@ -60,6 +60,8 @@ const swipe= document.querySelector('.swi-container');
 const swipes= document.querySelectorAll('.swiper-slide img');
 const workVid = document.querySelector('.workVideos');
 const workSocMed = document.querySelector('.workSocial');
+const websites = document.querySelector('.websites');
+const campaigns = document.querySelector('.campaign');
 //
 workVid.addEventListener('click',function(){
   document.querySelector('.hold').classList.add('active');
@@ -68,6 +70,29 @@ workVid.addEventListener('click',function(){
   document.querySelector('.vid-wrapper').classList.add('active');
 },100);
 });
+workVid.addEventListener('mouseover',function(){
+  document.querySelector('.video-hover video').src='videos/four.mp4';
+  document.querySelector('.video-hover video').play();
+  document.querySelector('.video-hover video').classList.add('active');
+
+})
+workVid.addEventListener('mouseleave',function(){
+document.querySelector('.video-hover video').classList.remove('active');
+  document.querySelector('.video-hover video').pause();
+
+
+})
+
+workSocMed.addEventListener('mouseover',function(){
+  document.querySelector('.video-hover video').classList.add('active');
+  document.querySelector('.video-hover video').src='videos/ocean-65560.mp4';
+
+  document.querySelector('.video-hover video').play();
+})
+workSocMed.addEventListener('mouseleave',function(){
+  document.querySelector('.video-hover video').classList.remove('active');
+  document.querySelector('.video-hover video').pause();
+})
 workSocMed.addEventListener('click',function(){
   document.querySelector('.hold').classList.add('active');
   player.pause();
@@ -76,7 +101,25 @@ workSocMed.addEventListener('click',function(){
   document.querySelector('.social-media').classList.add('active');
 },100)
 });
+websites.addEventListener('mouseover',function(){
+  document.querySelector('.video-hover video').src='videos/elephants-126215.mp4';
+  document.querySelector('.video-hover video').classList.add('active');
+  document.querySelector('.video-hover video').play();
+})
+websites.addEventListener('mouseleave',function(){
+  document.querySelector('.video-hover video').classList.remove('active');
+  document.querySelector('.video-hover video').pause();
+})
 
+campaigns.addEventListener('mouseover',function(){
+  document.querySelector('.video-hover video').src='videos/five.mp4';
+  document.querySelector('.video-hover video').classList.add('active');
+  document.querySelector('.video-hover video').play();
+})
+campaigns.addEventListener('mouseleave',function(){
+  document.querySelector('.video-hover video').classList.remove('active');
+  document.querySelector('.video-hover video').pause();
+})
 // swipes.forEach( swip=> {
 //   swip.addEventListener('click',function(){
 //     // console.log(swip.parentElement.querySelector('p').textContent);

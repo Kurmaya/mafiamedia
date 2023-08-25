@@ -1,9 +1,9 @@
 import {
 	ShaderMaterial,
 	UniformsUtils
-} from '../modules/three.module.js';
-import { Pass, FullScreenQuad } from '../modules/Pass.js';
-import { FilmShader } from '../modules/FilmShader.js';
+} from './three.module.js';
+import { Pass, FullScreenQuad } from './Pass.js';
+import { FilmShader } from './FilmShader.js';
 
 class FilmPass extends Pass {
 

@@ -2,11 +2,11 @@ import {
 	Clock,
 	Vector2,
 	WebGLRenderTarget
-} from '../modules/three.module.js';
-import { CopyShader } from '../modules/CopyShader.js';
-import { ShaderPass } from '../modules/ShaderPass.js';
-import { MaskPass } from '../modules/MaskPass.js';
-import { ClearMaskPass } from '../modules/MaskPass.js';
+} from '/modules/three.module.js';
+import { CopyShader } from './CopyShader.js';
+import { ShaderPass } from './ShaderPass.js';
+import { MaskPass } from './MaskPass.js';
+import { ClearMaskPass } from './MaskPass.js';
 
 class EffectComposer {
 

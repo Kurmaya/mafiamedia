@@ -15,14 +15,14 @@ import * as dat from "https://cdn.skypack.dev/dat.gui";
 // import * as dat from "https://cdn.skypack.dev/dat.gui";
 // import {GLTFLoader} from '../modules/GLTFLoader.js'
 
-import * as THREE from '../modules/three.module.js';
-import {GLTFLoader} from '../modules/GLTFLoader.js';
-import { EffectComposer } from '../modules/EffectComposer.js';
-import { RenderPass } from '../modules/RenderPass.js';
-import { FilmPass } from '../modules/FilmPass.js';
-import { ShaderPass } from '../modules/ShaderPass.js';
-import {VignetteShader} from '../modules/VignetteShader.js';
-import {FXAAShader} from '../modules/FXAAShader.js';
+import * as THREE from '/modules/three.module.js';
+import {GLTFLoader} from '/modules/GLTFLoader.js';
+import { EffectComposer } from '/modules/EffectComposer.js';
+import { RenderPass } from '/modules/RenderPass.js';
+import { FilmPass } from '/modules/FilmPass.js';
+import { ShaderPass } from '/modules/ShaderPass.js';
+import {VignetteShader} from '/modules/VignetteShader.js';
+import {FXAAShader} from '/modules/FXAAShader.js';
 
 
 // const gui = new dat.GUI();
@@ -323,6 +323,7 @@ window.addEventListener('resize', () =>{
 
   //Update renderer/ composer
   composer.setSize(sizes.width,sizes.height);
+  resizes();
   // const pixelRatio = renderer.getPixelRatio();
 
 	// fxaa.material.uniforms[ 'resolution' ].value.x = 1 / ( sizes.width * pixelRatio );
@@ -331,7 +332,7 @@ window.addEventListener('resize', () =>{
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
 })
 //animate
-document.addEventListener('mousemove',onDocumentMouseMove)
+// document.addEventListener('mousemove',onDocumentMouseMove)
 let mouseX= 0;
 let mouseY=0;
 
@@ -340,10 +341,11 @@ let targetY=0;
 const windowX= window.innerWidth/ 2;
 const windowY= window.innerHeight/2;
 
-
+document.querySelector('.mark').addEventListener('mousemove',onDocumentMouseMove);
 function onDocumentMouseMove(event){
   mouseX= (event.clientX - windowX);
   mouseY = (event.clientY-windowY);
+
 
 }
 const tl = gsap.timeline();
@@ -393,6 +395,17 @@ function tip() {
   })
   // console.log('clicked')
 }
+function resizes(){
+  if(window.innerWidth<600){
+    hatR.scale.set(.6,.6,.6);
+    hat2R.scale.set(0.6,.6,.6);
+  }
+  else if (window.innerWidth>600){
+    hatR.scale.set(1,1,1);
+    hat2R.scale.set(1,1,1);
+  }
+
+}
 // controls.update();
 const clock = new THREE.Clock();
 // console.log(cig.material);
@@ -410,6 +423,7 @@ function animate(){
     hatR.rotation.y =0.2 +(mouseX/1.2) *0.002;
     hat2R.rotation.y =0.2+ (mouseX/1.2) *0.002;
     cig.position.x = (mouseX+40) *0.005;
+
     // head.rotation.y = (mouseX/1.2) *0.001;
     // light1.position.x=(mouseX/1.2) *0.009;
     // light1.position.y=(mouseX/2.5) *0.005;
@@ -422,6 +436,12 @@ function animate(){
     // cig.rotation.y = (mouseX+10) *0.001;
     // cig.material.opacity= (mouseX/100);
     // console.log((mouseX/2)/-100);
+  }
+  if(window.innerWidth<600){
+    hatR.rotation.y =0.2 +(mouseX/1.5) *0.003;
+    hat2R.rotation.y =0.2+ (mouseX/1.5) *0.003;
+
+
   }
 
 // tip();
