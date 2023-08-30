@@ -43,6 +43,7 @@ close.forEach((c) => {
     document.querySelector('.hold').classList.remove('active');
     document.querySelector('.social-media').classList.remove('active');
   document.querySelector('.vid-wrapper').classList.remove('active');
+  document.querySelector('.websites-holder').classList.remove('active');
   player.pause();
     // c.parentElement.classList.remove('active');
   })
@@ -65,8 +66,9 @@ const campaigns = document.querySelector('.campaign');
 //
 workVid.addEventListener('click',function(){
   document.querySelector('.hold').classList.add('active');
+  document.querySelector('.websites-holder').classList.remove('active');
+  document.querySelector('.social-media').classList.remove('active');
   setTimeout(function(){
-    document.querySelector('.social-media').classList.remove('active');
   document.querySelector('.vid-wrapper').classList.add('active');
 },100);
 });
@@ -97,8 +99,10 @@ workSocMed.addEventListener('click',function(){
   document.querySelector('.hold').classList.add('active');
   player.pause();
   document.querySelector('.vid-wrapper').classList.remove('active');
+  document.querySelector('.websites-holder').classList.remove('active');
   setTimeout(function(){
   document.querySelector('.social-media').classList.add('active');
+
 },100)
 });
 websites.addEventListener('mouseover',function(){
@@ -110,7 +114,15 @@ websites.addEventListener('mouseleave',function(){
   document.querySelector('.video-hover video').classList.remove('active');
   document.querySelector('.video-hover video').pause();
 })
-
+websites.addEventListener('click',function(){
+  document.querySelector('.hold').classList.add('active');
+  player.pause();
+  document.querySelector('.vid-wrapper').classList.remove('active');
+  document.querySelector('.social-media').classList.remove('active');
+  setTimeout(function(){
+  document.querySelector('.websites-holder').classList.add('active');
+},100)
+});
 campaigns.addEventListener('mouseover',function(){
   document.querySelector('.video-hover video').src='videos/five.mp4';
   document.querySelector('.video-hover video').classList.add('active');

@@ -25,7 +25,7 @@ import {VignetteShader} from '../modules/VignetteShader.js';
 import {FXAAShader} from '../modules/FXAAShader.js';
 
 
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 const canvas = document.querySelector('canvas.webgl');
 //AUX consts
 let hat,h2,hatR,hat2R;
@@ -252,12 +252,12 @@ shadowPlane.rotation.x=-1.7;
 shadowPlane.position.y=-1.1;
 shadowPlane.position.z=-1.52;
 shadowPlane.receiveShadow=true;
-gui.add(shadowPlane.rotation,'x',-2,2).name('shadowPlane r x');
-gui.add(shadowPlane.rotation,'y',-2,2).name('shadowPlane r y');
-gui.add(shadowPlane.rotation,'z',-2,2).name('shadowPlane r z');
-gui.add(shadowPlane.position,'x',-5,5).name('shadowPlane p x');
-gui.add(shadowPlane.position,'y',-5,5).name('shadowPlane p y');
-gui.add(shadowPlane.position,'z',-5,5).name('shadowPlane p z');
+// gui.add(shadowPlane.rotation,'x',-2,2).name('shadowPlane r x');
+// gui.add(shadowPlane.rotation,'y',-2,2).name('shadowPlane r y');
+// gui.add(shadowPlane.rotation,'z',-2,2).name('shadowPlane r z');
+// gui.add(shadowPlane.position,'x',-5,5).name('shadowPlane p x');
+// gui.add(shadowPlane.position,'y',-5,5).name('shadowPlane p y');
+// gui.add(shadowPlane.position,'z',-5,5).name('shadowPlane p z');
 // gui.add(spotLight.position,'y',3,10).name('slight p y');
 // gui.add(spotLight.position,'z',-3,4).name('slight p z');
 
